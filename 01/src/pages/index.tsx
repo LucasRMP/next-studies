@@ -15,19 +15,17 @@ interface HomeProps {
 
 function Home({ recommendedTitle, recommendedProducts }: HomeProps) {
   return (
-    <div>
-      <section>
-        <Title>{recommendedTitle}</Title>
+    <section>
+      <Title>{recommendedTitle}</Title>
 
-        <ul>
-          {recommendedProducts.map(({ id, title, price }: IProduct) => (
-            <li key={id}>
-              {title} - {price}
-            </li>
-          ))}
-        </ul>
-      </section>
-    </div>
+      <ul>
+        {recommendedProducts.map(({ id, title, price }: IProduct) => (
+          <li key={id}>
+            {title} - {price}
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
